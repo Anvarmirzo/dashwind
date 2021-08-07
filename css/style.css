@@ -2,6 +2,10 @@ html {
 	font-family: 'DM Sans', sans-serif;
 }
 
+.font-poppins {
+	font-family: 'Poppins', sans-serif;
+}
+
 .text-orange {
 	color: #ff7143;
 }
@@ -25,6 +29,17 @@ html {
 	border-radius: 50%;
 }
 
+.green-check-list::before,
+.green-check-list li::before {
+	background-image: url('../images/icons/check.svg');
+	background-color: rgba(84, 220, 196, 0.2);
+}
+.orange-check-list::before,
+.orange-check-list li::before {
+	background-image: url('../images/icons/check--orange.svg');
+	background-color: rgba(255, 209, 102, 0.2);
+}
+
 .check-list li {
 	position: relative;
 	padding-left: 34px;
@@ -41,16 +56,4 @@ html {
 	background-color: transparent;
 	width: 24px;
 	height: 24px;
-}
-
-.green-check-list::before,
-.green-check-list li::before {
-	background-image: url('../images/icons/check.svg');
-	background-color: rgba(84, 220, 196, 0.2);
-}
-
-.orange-check-list::before,
-.orange-check-list li::before {
-	background-image: url('../images/icons/check--orange.svg');
-	background-color: rgba(255, 209, 102, 0.2);
 }

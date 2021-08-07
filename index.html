@@ -13,6 +13,10 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- Tailwind CDN -->
 		<link
 			href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
@@ -28,17 +32,18 @@
 			<!-- Navigation -->
 			<nav
 				class="
+					p-4
+					text-xs
+					sm:p-10 sm:text-base
 					container
 					mx-auto
 					flex
 					items-center
 					justify-between
-					flex-wrap
 					bg-teal-500
-					p-10
 				"
 			>
-				<a href="/" class="flex items-center flex-shrink-0 text-white mr-6">
+				<a href="/" class="flex items-center flex-shrink-0 text-white">
 					<svg
 						width="40"
 						height="41"
@@ -60,47 +65,16 @@
 						/>
 					</svg>
 				</a>
-				<button
-					class="
-						sm:hidden
-						flex
-						items-center
-						px-3
-						py-2
-						border
-						rounded
-						text-teal-200
-						border-teal-400
-					"
-					id="burgerBtn"
-				>
-					<svg
-						class="fill-current h-3 w-3"
-						viewbox="0 0 20 20"
-						xmlns="http://www.w3.org/2000/svg"
-					>
-						<title>Menu</title>
-						<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-					</svg>
-				</button>
 				<!-- Navigation Menu -->
-				<div
-					class="
-						sm:ml-auto sm:w-auto sm:items-center
-						w-full
-						flex flex-row
-						items-center
-						justify-center
-					"
-					id="navMenu"
-				>
+				<div class="ml-auto flex items-center">
 					<a
 						href="#responsive-header"
 						class="
 							text-gray-500
 							font-bold
 							hover:text-gray-400
-							mr-5
+							mr-2
+							sm:mr-5
 							transition-all
 							duration-300
 						"
@@ -111,16 +85,20 @@
 						href="##"
 						class="
 							font-bold
-							px-8
-							py-2
+							px-1
+							sm:px-8
+							py-1
+							sm:py-2
 							border border-transparent
-							rounded-xl
+							rounded-sm
+							sm:rounded-xl
 							text-blue-500
 							bg-blue-100
 							hover:bg-blue-200
 							transition-all
 							duration-300
-							mr-5
+							mr-2
+							sm:mr-5
 						"
 					>
 						Preview
@@ -129,10 +107,13 @@
 						href="##"
 						class="
 							font-bold
-							px-8
-							py-2
+							px-1
+							sm:px-8
+							py-1
+							sm:py-2
 							border border-transparent
-							rounded-xl
+							rounded-sm
+							sm:rounded-xl
 							text-white
 							bg-blue-500
 							hover:bg-blue-400
@@ -147,12 +128,22 @@
 		</header>
 		<!-- Content -->
 		<main>
-			<section class="text-center pb-6 mt-52">
-				<div class="container mx-auto px-10">
-					<h1 class="text-7xl font-bold px-24 mb-5">
+			<section class="text-center pb-3 md:pb-6 mt-12 md:mt-24 lg:mt-52">
+				<div class="container mx-auto px-4 sm:px-10">
+					<h1 class="text-3xl md:text-4xl lg:text-7xl font-bold lg:px-24 mb-5">
 						Huge Dashboard kit built for Tailwind CSS
 					</h1>
-					<p class="text-xl max-w-3xl px-5 mx-auto mb-10">
+					<p
+						class="
+							md:text-xl
+							max-w-3xl
+							lg:px-5
+							text-gray-500
+							mx-auto
+							mb-10
+							font-poppins
+						"
+					>
 						Create practical dashboard designs, save time and money developing
 						your web project.
 					</p>
@@ -160,18 +151,24 @@
 						<a
 							class="
 								inline-block
-								rounded-xl
+								rounded-md
+								md:rounded-lg
 								bg-blue-500
-								px-4
-								py-5
-								mr-10
+								px-2
+								py-2
+								sm:px-3 sm:py-3
+								md:px-4 md:py-5
+								mr-5
+								md:mr-10
 								text-white
+								hover:bg-blue-400
+								transition-all
 							"
 							href="##"
 							>Download - from $39</a
 						>
 						<button
-							class="p-4 border rounded-full border-blue-200"
+							class="p-2 md:p-4 border rounded-full border-blue-200"
 							type="button"
 						>
 							<svg
@@ -201,21 +198,46 @@
 					<img src="./images/group-dashboard.png" alt="Tailwind Dashboard" />
 				</div>
 			</section>
-			<section class="container mx-auto py-12 px-10">
-				<h2 class="text-5xl font-bold text-center max-w-4xl mx-auto mb-20">
+			<section class="container mx-auto py-5 md:py-12 px-4 sm:px-10">
+				<h2
+					class="
+						text-lg
+						md:text-3xl
+						lg:text-5xl
+						font-bold
+						text-center
+						max-w-4xl
+						mx-auto
+						mb-6
+						md:mb-20
+					"
+				>
 					Robust Interface and soon a clean coded version
 				</h2>
-				<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+				<div
+					class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 font-poppins"
+				>
 					<div
 						class="
 							border border-gray-200
-							p-8
+							py-4
+							md:py-8
+							px-8
 							flex flex-col
 							justify-center
 							items-center
 						"
 					>
-						<span class="mb-5 rounded-full bg-blue-100 bg-opacity-30 p-8">
+						<span
+							class="
+								mb-3
+								md:mb-5
+								rounded-full
+								bg-blue-100 bg-opacity-30
+								p-4
+								md:p-8
+							"
+						>
 							<svg
 								width="34"
 								height="35"
@@ -228,18 +250,31 @@
 								/>
 							</svg>
 						</span>
-						<p class="text-lg font-medium">Modular Design</p>
+						<p class="text-center text-xs md:text-lg font-medium text-gray-500">
+							Modular Design
+						</p>
 					</div>
 					<div
 						class="
 							border border-gray-200
-							p-8
+							py-4
+							md:py-8
+							px-8
 							flex flex-col
 							justify-center
 							items-center
 						"
 					>
-						<span class="mb-5 rounded-full bg-yellow-300 bg-opacity-10 p-8">
+						<span
+							class="
+								mb-3
+								md:mb-5
+								rounded-full
+								bg-yellow-300 bg-opacity-10
+								p-4
+								md:p-8
+							"
+						>
 							<svg
 								width="34"
 								height="35"
@@ -252,19 +287,32 @@
 								/>
 							</svg>
 						</span>
-						<p>100% Customizable</p>
+						<p class="text-center text-xs md:text-lg font-medium text-gray-500">
+							100% Customizable
+						</p>
 					</div>
 					<div
 						class="
 							relative
 							border border-gray-200
-							p-8
+							py-4
+							md:py-8
+							px-8
 							flex flex-col
 							justify-center
 							items-center
 						"
 					>
-						<span class="mb-5 rounded-full bg-indigo-100 bg-opacity-50 p-8">
+						<span
+							class="
+								mb-3
+								md:mb-5
+								rounded-full
+								bg-indigo-100 bg-opacity-50
+								p-4
+								md:p-8
+							"
+						>
 							<svg
 								width="34"
 								height="35"
@@ -277,16 +325,21 @@
 								/>
 							</svg>
 						</span>
-						<p>Well coded</p>
+						<p class="text-center text-xs md:text-lg font-medium text-gray-500">
+							Well coded
+						</p>
 						<span
 							class="
 								absolute
-								right-4
-								top-4
+								right-1
+								top-1
+								md:right-4 md:top-4
 								bg-red-200 bg-opacity-30
-								px-3
+								px-2
+								sm:px-3
 								rounded-2xl
-								text-red-400
+								text-red-400 text-xs
+								sm:text-base
 							"
 							>soon</span
 						>
@@ -294,13 +347,24 @@
 					<div
 						class="
 							border border-gray-200
-							p-8
+							py-4
+							md:py-8
+							px-8
 							flex flex-col
 							justify-center
 							items-center
 						"
 					>
-						<span class="mb-5 rounded-full bg-green-200 bg-opacity-20 p-8">
+						<span
+							class="
+								mb-3
+								md:mb-5
+								rounded-full
+								bg-green-200 bg-opacity-20
+								p-4
+								md:p-8
+							"
+						>
 							<svg
 								width="34"
 								height="35"
@@ -316,12 +380,26 @@
 								/>
 							</svg>
 						</span>
-						<p>All categories</p>
+						<p class="text-center text-xs md:text-lg font-medium text-gray-500">
+							All categories
+						</p>
 					</div>
 				</div>
 			</section>
-			<section class="container mx-auto py-12 px-10">
-				<h2 class="text-5xl font-bold text-center max-w-3xl mx-auto mb-10">
+			<section class="container mx-auto py-5 md:py-12 px-4 sm:px-10">
+				<h2
+					class="
+						text-lg
+						md:text-3xl
+						lg:text-5xl
+						font-bold
+						text-center
+						max-w-3xl
+						mx-auto
+						mb-6
+						md:mb-10
+					"
+				>
 					Why do we continue to develop this Dashwind Kit?
 				</h2>
 				<p
@@ -329,10 +407,12 @@
 						font-medium
 						text-center
 						max-w-5xl
-						text-gray-500 text-xl
-						leading-8
+						text-gray-500
+						md:text-xl md:leading-8
 						mx-auto
-						mb-5
+						mb-4
+						md:mb-5
+						font-poppins
 					"
 				>
 					“ The first question that came to my mind when it came to the idea of
@@ -341,14 +421,33 @@
 					a huge Dashboard Kit based on Tailwind CSS. Tailwind CSS is a really
 					great framework and I already use it in many other projects.”
 				</p>
-				<h3 class="text-center text-gray-500 text-xl leading-8 mb-10">
+				<h3
+					class="
+						text-center text-gray-500
+						md:text-xl md:leading-8
+						mb-5
+						md:mb-10
+						font-poppins
+					"
+				>
 					See what I have planned below:
 				</h3>
-				<ul class="flex justify-center gap-5 mb-10">
+				<ul
+					class="
+						flex flex-wrap flex-col
+						lg:flex-row
+						justify-center
+						gap-5
+						mb-10
+						font-poppins
+					"
+				>
 					<li
 						class="
 							flex
 							items-center
+							m-auto
+							lg:m-0
 							gap-2
 							py-2
 							px-7
@@ -373,6 +472,8 @@
 						class="
 							flex
 							items-center
+							m-auto
+							lg:m-0
 							gap-2
 							py-2
 							px-7
@@ -399,6 +500,8 @@
 							flex
 							items-center
 							gap-2
+							m-auto
+							lg:m-0
 							py-2
 							px-7
 							bg-green-200 bg-opacity-20
@@ -422,6 +525,8 @@
 						class="
 							flex
 							items-center
+							m-auto
+							lg:m-0
 							gap-2
 							py-2
 							px-7
@@ -444,18 +549,32 @@
 						Coded version
 					</li>
 				</ul>
-				<div class="flex justify-center items-center gap-2">
+				<div
+					class="flex flex-col sm:flex-row justify-center items-center gap-2"
+				>
 					<span class="border-2 rounded-full border-blue-500 p-0.5">
 						<img src="./images/profile-pic.png" alt="Jamshidbek Tashpulatov" />
 					</span>
-					<div>
+					<div class="text-center sm:text-left font-poppins">
 						<p class="font-medium mb-1">Jamshidbek Tashpulatov</p>
 						<p class="text-xs text-gray-600">Visual Designer - Creator</p>
 					</div>
 				</div>
 			</section>
-			<section class="container mx-auto py-12 px-10">
-				<h2 class="text-5xl font-bold text-center max-w-3xl mx-auto mb-20">
+			<section class="container mx-auto py-5 md:py-12 px-4 sm:px-10">
+				<h2
+					class="
+						text-lg
+						md:text-3xl
+						lg:text-5xl
+						font-bold
+						text-center
+						max-w-3xl
+						mx-auto
+						mb-6
+						md:mb-20
+					"
+				>
 					See what's inside Dashwind Kit!
 				</h2>
 				<article
@@ -466,20 +585,37 @@
 						sm:flex-nowrap
 						text-center
 						sm:text-left
-						mb-14
+						mb-6
+						md:mb-14
 					"
 				>
 					<div>
 						<img src="./images/colors/group-color.png" alt="Dashwind Kit" />
 					</div>
 					<div>
-						<h3 class="text-3xl font-medium mb-3">Get Started Guide</h3>
-						<p class="text-lg text-gray-700 text-opacity-80 mb-3 leading-7">
+						<h3 class="md:text-3xl font-medium mb-3">Get Started Guide</h3>
+						<p
+							class="
+								text-sm
+								md:text-lg
+								text-gray-700 text-opacity-80
+								mb-3
+								md:leading-7
+								font-poppins
+							"
+						>
 							Easily customize your project colors and styles with a design
 							system control center.
 						</p>
 						<a
-							class="text-blue-500 font-bold transition-all hover:text-blue-400"
+							class="
+								text-sm
+								md:text-base
+								text-blue-500
+								font-bold
+								transition-all
+								hover:text-blue-400
+							"
 							href="##"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -495,17 +631,27 @@
 						sm:flex-nowrap
 						text-center
 						sm:text-left
-						mb-36
+						mb-6
+						md:mb-36
 					"
 				>
 					<div>
-						<h3 class="text-3xl font-medium mb-3">Components</h3>
-						<p class="text-lg text-gray-700 text-opacity-80 leading-7">
+						<h3 class="md:text-3xl font-medium mb-3">Components</h3>
+						<p
+							class="
+								text-sm
+								md:text-lg
+								text-gray-700 text-opacity-80
+								mb-3
+								md:leading-7
+								font-poppins
+							"
+						>
 							500+ Powerful component toolkit to help you with any web design
 							duties.
 						</p>
 					</div>
-					<div>
+					<div class="mb-4 md:mb-0">
 						<img
 							src="./images/components/Group-component.png"
 							alt="Dashwind Components"
@@ -522,38 +668,87 @@
 						sm:text-left
 					"
 				>
-					<div>
+					<div class="mb-4 md:mb-0">
 						<img
 							src="./images/templates/Group-template.png"
 							alt="Dashwind Templates"
 						/>
 					</div>
 					<div>
-						<h3 class="text-3xl font-medium mb-3">Templates</h3>
-						<p class="text-lg text-gray-700 text-opacity-80 leading-7">
+						<h3 class="md:text-3xl font-medium mb-3">Templates</h3>
+						<p
+							class="
+								text-sm
+								md:text-lg
+								text-gray-700 text-opacity-80
+								mb-3
+								md:leading-7
+								font-poppins
+							"
+						>
 							Production-ready dashboard templates designed for desktop, tablet,
 							and mobile resolutions (For now, just the desktop).
 						</p>
 					</div>
 				</article>
 			</section>
-			<section class="container mx-auto py-12 px-10">
-				<h2 class="text-5xl font-bold text-center max-w-3xl mx-auto mb-5">
+			<section class="container mx-auto py-5 md:py-12 px-4 sm:px-10">
+				<h2
+					class="
+						text-lg
+						md:text-3xl
+						lg:text-5xl
+						font-bold
+						text-center
+						max-w-3xl
+						mx-auto
+						mb-2
+						md:mb-5
+					"
+				>
 					What will you get in the next update?
 				</h2>
-				<p class="text-center text-xl font-medium text-gray-500 mb-24">
+				<p
+					class="
+						text-center text-sm
+						md:text-xl
+						font-medium
+						text-gray-500
+						mb-12
+						md:mb-24
+						font-poppins
+					"
+				>
 					The next update will come on October 20th
 				</p>
 				<div class="grid lg:grid-cols-3 gap-10">
 					<div>
 						<div class="flex">
 							<h3
-								class="mb-8 green-check-list check-list--big font-bold text-2xl"
+								class="
+									mb-6
+									md:mb-8
+									green-check-list
+									check-list--big
+									font-bold
+									text-2xl
+								"
 							>
 								Figma base project
 							</h3>
 						</div>
-						<ul class="pl-14 green-check-list check-list grid gap-5">
+						<ul
+							class="
+								pl-3
+								md:pl-14
+								green-check-list
+								check-list
+								grid
+								gap-5
+								text-gray-500
+								font-poppins
+							"
+						>
 							<li>Style guideline</li>
 							<li>Auto layout setup</li>
 							<li>UI components and variants</li>
@@ -566,11 +761,29 @@
 					</div>
 					<div>
 						<h3
-							class="mb-8 orange-check-list check-list--big font-bold text-2xl"
+							class="
+								mb-6
+								md:mb-8
+								orange-check-list
+								check-list--big
+								font-bold
+								text-2xl
+							"
 						>
 							Dashboard UI code in Tailwind
 						</h3>
-						<ul class="pl-14 orange-check-list check-list grid gap-5">
+						<ul
+							class="
+								pl-3
+								md:pl-14
+								orange-check-list
+								check-list
+								grid
+								gap-5
+								text-gray-500
+								font-poppins
+							"
+						>
 							<li>Tailwind CSS base project</li>
 							<li>Setup style guidelines</li>
 							<li>Code the UI elements</li>
@@ -583,22 +796,62 @@
 					</div>
 					<div>
 						<h3
-							class="mb-8 orange-check-list check-list--big font-bold text-2xl"
+							class="
+								mb-6
+								md:mb-8
+								orange-check-list
+								check-list--big
+								font-bold
+								text-2xl
+							"
 						>
 							Dark version
 						</h3>
-						<ul class="pl-14 orange-check-list check-list grid gap-5">
+						<ul
+							class="
+								pl-3
+								md:pl-14
+								orange-check-list
+								check-list
+								grid
+								gap-5
+								text-gray-500
+								font-poppins
+							"
+						>
 							<li>Build a dark version in Figma</li>
 							<li>Integrate the dark version in Tailwind CSS</li>
 						</ul>
 					</div>
 				</div>
 			</section>
-			<section class="container mx-auto py-12 px-10">
-				<h2 class="text-5xl font-bold text-center max-w-3xl mx-auto mb-5">
+			<section class="container mx-auto py-5 md:py-12 px-4 sm:px-10">
+				<h2
+					class="
+						text-lg
+						md:text-3xl
+						lg:text-5xl
+						font-bold
+						text-center
+						max-w-3xl
+						mx-auto
+						mb-3
+						md:mb-5
+					"
+				>
 					Get now Dashwind Kit
 				</h2>
-				<p class="text-center text-xl font-medium text-gray-500 mb-20">
+				<p
+					class="
+						text-center text-sm
+						md:text-xl
+						font-medium
+						text-gray-500
+						mb-10
+						md:mb-20
+						font-poppins
+					"
+				>
 					Pay once, get things done unlimited times.
 				</p>
 				<div
@@ -607,16 +860,18 @@
 						md:flex-nowrap
 						items-center
 						justify-center
-						mb-24
+						md:mb-24
 					"
 				>
 					<article
 						class="
 							grid
 							justify-center
-							px-6
-							py-9
-							bg-gray-50
+							px-3
+							md:px-6
+							py-6
+							md:py-9
+							bg-gray-100
 							rounded-xl
 							mb-10
 							md:mb-0 md:mr-10
@@ -624,7 +879,18 @@
 					>
 						<h3 class="text-center mb-5 text-gray-600">Personal</h3>
 						<span class="text-center font-bold text-6xl mb-5">$49</span>
-						<ul class="green-check-list check-list px-5 grid gap-4 mb-16">
+						<ul
+							class="
+								green-check-list
+								check-list
+								px-5
+								grid
+								gap-4
+								mb-6
+								md:mb-16
+								font-poppins
+							"
+						>
 							<li>Personal license</li>
 							<li>Pre-order Tailwind CSS code</li>
 							<li>Lifetime access</li>
@@ -662,7 +928,18 @@
 					>
 						<h3 class="text-center mb-5 text-opacity-70">for Team</h3>
 						<span class="text-center font-bold text-6xl mb-5">$62</span>
-						<ul class="green-check-list check-list px-5 grid gap-4 mb-16">
+						<ul
+							class="
+								green-check-list
+								check-list
+								px-5
+								grid
+								gap-4
+								mb-6
+								md:mb-16
+								font-poppins
+							"
+						>
 							<li>Team license</li>
 							<li>Pre-order Tailwind CSS code</li>
 							<li>Lifetime access</li>
@@ -685,18 +962,22 @@
 						>
 					</article>
 				</div>
-				<div class="grid grid-cols-2 gap-12">
+				<div class="grid md:grid-cols-2 gap-6 md:gap-12">
 					<div>
-						<h3 class="mb-5 font-medium text-4xl">Updates?</h3>
-						<p class="text-gray-500">
+						<h3 class="mb-3 md:mb-5 font-medium text-2xl md:text-4xl">
+							Updates?
+						</h3>
+						<p class="text-sm sm:text-base text-gray-500 font-poppins">
 							We send email notifications when new versions are released. If you
 							have already bought Dashwind Kit, visit the product page to
 							download the latest version.
 						</p>
 					</div>
 					<div>
-						<h3 class="mb-5 font-medium text-4xl">Can I get a discount?</h3>
-						<p class="text-gray-500">
+						<h3 class="mb-3 md:mb-5 font-medium text-2xl md:text-4xl">
+							Can I get a discount?
+						</h3>
+						<p class="text-sm sm:text-base text-gray-500 font-poppins">
 							You can get a 50% discount if you are a student or a teacher, to
 							get it please email us with a proof of your student status or
 							teacher occupation.
@@ -710,28 +991,37 @@
 			class="
 				container
 				mx-auto
-				mt-36
-				px-10
-				pb-10
-				flex
+				mt-16
+				md:mt-36
+				px-4
+				sm:px-10
+				pb-5
+				md:pb-10
+				flex flex-wrap flex-col
+				gap-2
+				md:flex-row
+				items-center
 				justify-between
 				text-gray-500
+				font-poppins
+				text-sm
+				md:text-base
 			"
 		>
 			<p>Created with &#10084;&#65039; by Jamshid</p>
-			<div class="flex">
-				<p class="mr-8">
+			<div
+				class="flex flex-wrap gap-2 md:gap-8 flex-col md:flex-row text-center"
+			>
+				<p class="">
 					<span class="text-gray-400">Support:</span>
 					<a
-						class="hover:text-gray-400"
+						class="inline-block hover:text-gray-400"
 						href="mailto:jamshidbektashpulatov@gmail.com"
 						>jamshidbektashpulatov@gmail.com</a
 					>
 				</p>
-				<a class="hover:text-gray-400" href="##">Twitter</a>
+				<a class="max-w-max m-auto hover:text-gray-400" href="##">Twitter</a>
 			</div>
 		</footer>
-		<!--Custom Scripts -->
-		<script src="./js/script.js"></script>
 	</body>
 </html>

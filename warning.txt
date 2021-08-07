@@ -1,6 +1,2 @@
-1. JS -> Babel
-2. Accessibility
-3. Response
-4. Check color
-5. Font Family
-6. Bg Opacity
+1. Accessibility
+2. Check color
